@@ -1757,11 +1757,23 @@ summary {
 <p>The dataset has 90,000 rows. Our goal is to filter R responses so that we can drill down further and analyze the trends related to R developers.</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxudHlwZW9mKHRhYmxlKGRhdGEkTWFpbkJyYW5jaCkpXG5cbmBgYCJ9 -->
+<pre class="r"><code>typeof(table(data$MainBranch))
+</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiaW50ZWdlclwiXG4ifQ== -->
+<pre><code>[1] &quot;integer&quot;</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>Let’s create a braplot of the profession of the respondents.</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
 <!-- rnb-chunk-end -->
 </div>
 </div>
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiQW5hbHl6aW5nIFIgdXNlciBUcmVuZHMiCm91dHB1dDogaHRtbF9ub3RlYm9vawotLS0KCiMjIE92ZXJ2aWV3CgpTdGFja292ZXJmbG93IHJlY2VudGx5IHJlbGVhc2VkIHRoZSBhbm9ueW1pemVkIHJlc3VsdHMgb2YgdGhlaXIgMjAxOSBhbm51YWwgZGV2ZWxvcGVyIHN1cnZleS4gVGhlIGdvYWwgb2YgdGhpcyBwcm9qZWN0IGlzIHRvIGFuYWx5c2UgdmFyaW91cyB0cmVuZHMgZm9yIFIgdXNlcnMgYW5kIGRldmVsb3BlcnMgd29ybGR3aWRlLgoKCgojIyMjIERhdGEgV3JhbmdsaW5nIAoKVGhlIGRhdGFzZXQgaGFzIDkwLDAwMCByb3dzLiBPdXIgZ29hbCBpcyB0byBmaWx0ZXIgUiByZXNwb25zZXMgc28gdGhhdCB3ZSBjYW4gZHJpbGwgZG93biBmdXJ0aGVyIGFuZCBhbmFseXplIHRoZSB0cmVuZHMgcmVsYXRlZCB0byBSIGRldmVsb3BlcnMuCgpgYGB7cn0KCgoKCgoKYGBgCg==</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiQW5hbHl6aW5nIFIgdXNlciBUcmVuZHMiCm91dHB1dDogaHRtbF9ub3RlYm9vawotLS0KCiMjIE92ZXJ2aWV3CgpTdGFja292ZXJmbG93IHJlY2VudGx5IHJlbGVhc2VkIHRoZSBhbm9ueW1pemVkIHJlc3VsdHMgb2YgdGhlaXIgMjAxOSBhbm51YWwgZGV2ZWxvcGVyIHN1cnZleS4gVGhlIGdvYWwgb2YgdGhpcyBwcm9qZWN0IGlzIHRvIGFuYWx5c2UgdmFyaW91cyB0cmVuZHMgZm9yIFIgdXNlcnMgYW5kIGRldmVsb3BlcnMgd29ybGR3aWRlLgoKCgojIyMjIERhdGEgV3JhbmdsaW5nIAoKVGhlIGRhdGFzZXQgaGFzIDkwLDAwMCByb3dzLiBPdXIgZ29hbCBpcyB0byBmaWx0ZXIgUiByZXNwb25zZXMgc28gdGhhdCB3ZSBjYW4gZHJpbGwgZG93biBmdXJ0aGVyIGFuZCBhbmFseXplIHRoZSB0cmVuZHMgcmVsYXRlZCB0byBSIGRldmVsb3BlcnMuCgpgYGB7cn0KCiNyZWFkaW5nIG5lY2Vzc2FyeSBsaWJyYXJpZXMKcmVxdWlyZSh0aWR5dmVyc2UpCnJlcXVpcmUoY291bnRyeWNvZGUpCnJlcXVpcmUoaGlnaGNoYXJ0ZXIpCnJlcXVpcmUoZ2dwbG90MikKCiNyZWFkaW5nIHRoZSBkYXRhCmRhdGEgPC0gcmVhZF9jc3YoImRhdGEvc3VydmV5X3Jlc3VsdHNfcHVibGljLmNzdiIpCgoKI0xldCdzIGNoZWNrIHdobyBhbGwgYXJlIGRldmVsb3BlcnMKZGV2VGFibGUgPC0gYXMuZGF0YS5mcmFtZSh0YWJsZShkYXRhJE1haW5CcmFuY2gpKQoKCmBgYAoKTGV0J3MgY3JlYXRlIGEgYnJhcGxvdCBvZiB0aGUgcHJvZmVzc2lvbiBvZiB0aGUgcmVzcG9uZGVudHMuCgpgYGB7cn0KCgoKYGBg</div>
 
 
 

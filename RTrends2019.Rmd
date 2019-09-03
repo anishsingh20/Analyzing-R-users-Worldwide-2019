@@ -15,8 +15,25 @@ The dataset has 90,000 rows. Our goal is to filter R responses so that we can dr
 
 ```{r}
 
+#reading necessary libraries
+require(tidyverse)
+require(countrycode)
+require(highcharter)
+require(ggplot2)
+
+#reading the data
+data <- read_csv("data/survey_results_public.csv")
 
 
+#Let's check who all are developers
+devTable <- as.data.frame(table(data$MainBranch))
+
+
+```
+
+Let's create a braplot of the profession of the respondents.
+
+```{r}
 
 
 
