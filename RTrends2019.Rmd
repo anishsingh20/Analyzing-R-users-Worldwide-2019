@@ -91,15 +91,20 @@ table(Student)
 We can notice that most of the respondents are not Students.
 
 
-#### Let's see from which country had most respondents as Students ?
+### Let's see which country had most respondents as Students ?
 
+To achieve this let's create a Dataframe of countries with highest number of Student respondents.
 
-```{r  message=FALSE , warning=FALSE}
+```{r message=FALSE,warning=FALSE}
 
 StudentDf <- data %>% filter(Student=="Yes, full-time") %>% 
   count(Country) %>% 
   top_n(30) %>% 
   arrange(desc(n))
 
+StudentDf
+
 
 ```
+F
+
