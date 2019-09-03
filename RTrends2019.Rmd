@@ -69,7 +69,37 @@ Now let's check to which country the respondents belonged.
 
 ```{r message=FALSE,warning=FALSE}
 
-countryDf <- 
+#Creating a data frame of the Country and its frequency.
+countryDf <- data %>% count(Country) %>% 
+  top_n(10)
+
+#arranging in descending order of count
+countryDf<-arrange(countryDf,desc(n))
+  
+hchart(countryDf,hcaes(x=Country,y=n),type="column",name="Count") %>%  
+  hc_exporting(enabled = TRUE) %>%
+  hc_title(text="Barplot of Country of respondents",align="center") %>%
+  hc_add_theme(hc_theme_elementary()) 
+
+```
+From the above plot we can notice that most of the respondents were from US,India followed by Germany.
+
+```{r message=FALSE,warning=FALSE}
+table(Student)
+
+```
+We can notice that most of the respondents are not Students.
+
+
+#### Let's see from which country had most respondents as Students ?
+
+
+```{r  message=FALSE , warning=FALSE}
+
+StudentDf <- data %>% filter(Student=="Yes, full-time") %>% 
+  count(Country) %>% 
+  top_n(30) %>% 
+  arrange(desc(n))
 
 
 ```
