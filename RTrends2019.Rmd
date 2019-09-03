@@ -13,7 +13,7 @@ Stackoverflow recently released the anonymized results of their 2019 annual deve
 
 The dataset has 90,000 rows. Our goal is to filter R responses so that we can drill down further and analyze the trends related to R developers.
 
-```{r}
+```{r message=FALSE, warning=FALSE}
 
 #reading necessary libraries
 require(tidyverse)
@@ -23,7 +23,7 @@ require(ggplot2)
 
 #reading the data
 data <- read_csv("data/survey_results_public.csv")
-
+attach(data)
 
 #Let's check who all are developers
 devTable <- as.data.frame(table(data$MainBranch))
@@ -33,8 +33,43 @@ devTable <- as.data.frame(table(data$MainBranch))
 
 Let's create a braplot of the profession of the respondents.
 
-```{r}
+```{r message=FALSE, warning=FALSE}
 
+hchart(devTable,hcaes(x=Var1,y=Freq),type="column",name="Count",color="#9B6ED8") %>%  
+  hc_exporting(enabled = TRUE) %>%
+  hc_title(text="Barplot of occupation of participants",align="center") %>%
+  hc_add_theme(hc_theme_elementary()) 
+
+
+```
+
+So we can notice that that most of the participants are <b>developers</b>.
+
+
+Now let's see how many developers have developement just as a hobby.
+```{r message=FALSE, warning=FALSE} 
+
+table(data$Hobbyist)
+table(OpenSourcer)
+
+```
+
+
+Let's check the Employment of the respondents.
+
+```{r message=FALSE, warning=FALSE}
+
+round(prop.table(table(Employment))*100,2)
+
+```
+We can notice that 74 % of the respondents were ***Full time employees***.
+
+
+Now let's check to which country the respondents belonged.
+
+```{r message=FALSE,warning=FALSE}
+
+countryDf <- 
 
 
 ```
