@@ -106,5 +106,19 @@ StudentDf
 
 
 ```
-So most of the Students were from __India__,not from US
+So most of the Students were from __India__,not from US.
 
+
+```{r message=FALSE,warning=FALSE}
+
+
+EdlevelDf<- data %>% filter(Country %in% countryDf$Country) %>% 
+  select(EdLevel,Country) %>%
+  group_by(Country) 
+  
+  
+  
+
+
+
+```
