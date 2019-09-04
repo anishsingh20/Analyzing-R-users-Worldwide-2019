@@ -109,13 +109,22 @@ StudentDf
 So most of the Students were from __India__,not from US.
 
 
+Let's check the Education level for the major countries like India and US.
 ```{r message=FALSE,warning=FALSE}
 
 
-EdlevelDf<- data %>% filter(Country %in% countryDf$Country) %>% 
-  select(EdLevel,Country) %>%
-  group_by(Country) 
+EdlevelIndia<- data %>% filter(Country == "India") %>% 
+  group_by(EdLevel) %>% 
+  summarise(count=n()) %>% 
+  arrange(desc(count))
+
+#ignoring NA values
+EdlevelIndia <- na.omit(EdlevelIndia)
   
+
+  
+
+
   
   
 
