@@ -178,7 +178,41 @@ hchart(Edlevelger,hcaes(x=Edlevelger$EdLevel,y=Edlevelger$count),type="column",c
 ```{r message=FALSE,warning=FALSE}
 
 table(UndergradMajor)
+
 ```
 
 As expected most of them are __Computer Science Graduates followed by Another Engineering disclipine and Information Systems__.
+
+
+
+Country and the under-graduate programmes in which the participants were enrolled.
+
+
+```{r warning=FALSE,message=FALSE}
+
+#for India
+UGIndia<- data %>% filter(Country == "India") %>% 
+  group_by(UndergradMajor) %>% 
+  summarise(count=n()) %>% 
+  arrange(desc(count))
+
+na.omit(UGIndia)
+
+#for US
+UGUS<- data %>% filter(Country == "United States") %>% 
+  group_by(UndergradMajor) %>% 
+  summarise(count=n()) %>% 
+  arrange(desc(count))
+
+na.omit(UGUS)
+
+#for Germany
+UGGermany<- data %>% filter(Country == "Germany") %>% 
+  group_by(UndergradMajor) %>% 
+  summarise(count=n()) %>% 
+  arrange(desc(count))
+
+na.omit(UGGermany)
+```
+
 
