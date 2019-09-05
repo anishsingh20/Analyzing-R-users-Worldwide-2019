@@ -172,4 +172,13 @@ hchart(Edlevelger,hcaes(x=Edlevelger$EdLevel,y=Edlevelger$count),type="column",c
   hc_add_theme(hc_theme_elementary()) 
 ```
 
+### Let's analyze the UnderGraduate majors of the Participants
+
+
+```{r message=FALSE,warning=FALSE}
+
+table(UndergradMajor)
+```
+
+As expected most of them are __Computer Science Graduates followed by Another Engineering disclipine and Information Systems__.
 
