@@ -165,7 +165,11 @@ Edlevelger<- data %>% filter(Country == "Germany") %>%
   summarise(count=n()) %>% 
   arrange(desc(count))
 
-
+#let's create a Barplot
+hchart(Edlevelger,hcaes(x=Edlevelger$EdLevel,y=Edlevelger$count),type="column",color="purple",name="Count") %>%  
+  hc_exporting(enabled = TRUE) %>%
+  hc_title(text="Barplot Education level of german Respondents",align="center") %>%
+  hc_add_theme(hc_theme_elementary()) 
 ```
 
 
