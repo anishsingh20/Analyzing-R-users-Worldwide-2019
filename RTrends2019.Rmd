@@ -196,7 +196,7 @@ UGIndia<- data %>% filter(Country == "India") %>%
   summarise(count=n()) %>% 
   arrange(desc(count))
 
-na.omit(UGIndia)
+UGIndia<-na.omit(UGIndia)
 
 #for US
 UGUS<- data %>% filter(Country == "United States") %>% 
@@ -204,7 +204,7 @@ UGUS<- data %>% filter(Country == "United States") %>%
   summarise(count=n()) %>% 
   arrange(desc(count))
 
-na.omit(UGUS)
+UGUS<-na.omit(UGUS)
 
 #for Germany
 UGGermany<- data %>% filter(Country == "Germany") %>% 
@@ -212,7 +212,8 @@ UGGermany<- data %>% filter(Country == "Germany") %>%
   summarise(count=n()) %>% 
   arrange(desc(count))
 
-na.omit(UGGermany)
+UGGermany<-na.omit(UGGermany)
 ```
 
+We see almost similar trends for all the 3 major countries.
 
