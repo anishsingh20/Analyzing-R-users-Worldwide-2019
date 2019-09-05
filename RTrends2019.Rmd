@@ -155,6 +155,12 @@ Let'd check the results for Germany.
 
 ```{r}
 
+Edlevelger<- data %>% filter(Country == "Germany") %>% 
+  group_by(EdLevel) %>% 
+  summarise(count=n()) %>% 
+  arrange(desc(count))
+
+
 ```
 
 
