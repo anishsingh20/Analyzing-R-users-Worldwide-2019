@@ -122,11 +122,10 @@ EdlevelIndia<- data %>% filter(Country == "India") %>%
 EdlevelIndia <- na.omit(EdlevelIndia)
   
 #let's create a Barplot
-hchart(EdlevelIndia,hcaes(x=EdLevel,y=count,type="column",name="Count")) %>%  
+hchart(EdlevelIndia,hcaes(x=EdlevelIndia$EdLevel,y=EdlevelIndia$count),type="column",color="red",name="Count") %>%  
   hc_exporting(enabled = TRUE) %>%
-  hc_title(text="Barplot of Education level of Indian respondents",align="center") %>%
+  hc_title(text="Barplot Education level of Indian Respondents",align="center") %>%
   hc_add_theme(hc_theme_elementary()) 
-  
 
 
   
