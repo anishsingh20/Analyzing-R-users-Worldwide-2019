@@ -121,7 +121,11 @@ EdlevelIndia<- data %>% filter(Country == "India") %>%
 #ignoring NA values
 EdlevelIndia <- na.omit(EdlevelIndia)
   
-
+#let's create a Barplot
+hchart(EdlevelIndia,hcaes(x=EdLevel,y=count,type="column",name="Count")) %>%  
+  hc_exporting(enabled = TRUE) %>%
+  hc_title(text="Barplot of Education level of Indian respondents",align="center") %>%
+  hc_add_theme(hc_theme_elementary()) 
   
 
 
@@ -131,3 +135,26 @@ EdlevelIndia <- na.omit(EdlevelIndia)
 
 
 ```
+Let's check the results for USA.
+
+
+```{r message=FALSE, warning=FALSE}
+
+EdlevelUS<- data %>% filter(Country == "United States") %>% 
+  group_by(EdLevel) %>% 
+  summarise(count=n()) %>% 
+  arrange(desc(count))
+
+#ignoring NA values
+EdlevelIndia <- na.omit(EdlevelIndia)
+
+```
+
+
+Let'd check the results for Germany.
+
+```{r}
+
+```
+
+
