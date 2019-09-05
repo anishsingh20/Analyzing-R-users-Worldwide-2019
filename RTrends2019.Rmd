@@ -147,10 +147,16 @@ EdlevelUS<- data %>% filter(Country == "United States") %>%
 #ignoring NA values
 EdlevelIndia <- na.omit(EdlevelIndia)
 
+# let's create a Barplot
+hchart(EdlevelUS,hcaes(x=EdlevelUS$EdLevel,y=EdlevelUS$count),type="column",color="Green",name="Count") %>%  
+  hc_exporting(enabled = TRUE) %>%
+  hc_title(text="Barplot Education level of American Respondents",align="center") %>%
+  hc_add_theme(hc_theme_elementary()) 
+  
 ```
 
 
-Let'd check the results for Germany.
+Let's check the results for Germany.
 
 ```{r}
 
