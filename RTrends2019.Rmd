@@ -198,6 +198,8 @@ UGIndia<- data %>% filter(Country == "India") %>%
 
 UGIndia<-na.omit(UGIndia)
 
+UGIndia
+
 #for US
 UGUS<- data %>% filter(Country == "United States") %>% 
   group_by(UndergradMajor) %>% 
@@ -206,6 +208,8 @@ UGUS<- data %>% filter(Country == "United States") %>%
 
 UGUS<-na.omit(UGUS)
 
+UGUS
+
 #for Germany
 UGGermany<- data %>% filter(Country == "Germany") %>% 
   group_by(UndergradMajor) %>% 
@@ -213,10 +217,21 @@ UGGermany<- data %>% filter(Country == "Germany") %>%
   arrange(desc(count))
 
 UGGermany<-na.omit(UGGermany)
+
+UGGermany
+
 ```
 
 We see almost similar trends for all the 3 major countries.
 
+
+### Let's see what type of developers were there ?
+
+
+```{r warning=FALSE,message=FALSE}
+
+
+```
 
 
 
