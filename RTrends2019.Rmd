@@ -231,6 +231,12 @@ We see almost similar trends for all the 3 major countries.
 ```{r warning=FALSE,message=FALSE}
 
 
+DevTypeDf<- data %>% filter(Country %in% countryDf$Country) %>% 
+  select(DevType) %>% 
+  group_by(DevType) %>% 
+  summarise(Count = n()) %>% 
+  filter(Count > 100)
+
 ```
 
 
