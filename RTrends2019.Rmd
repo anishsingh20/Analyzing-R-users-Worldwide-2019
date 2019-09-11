@@ -236,7 +236,12 @@ DevTypeDf<- data %>% filter(Country %in% countryDf$Country) %>%
   group_by(DevType) %>% 
   #creating a new column which has the count
   summarise(Count = n()) %>% 
-  filter(Count > 100)
+  filter(Count > 100) %>% 
+  arrange(desc(Count))
+
+DevTypeDf<-na.omit(DevTypeDf)
+
+
 
 ```
 
