@@ -230,10 +230,11 @@ We see almost similar trends for all the 3 major countries.
 
 ```{r warning=FALSE,message=FALSE}
 
-
+#keeping only the respondents from top 10 countries.
 DevTypeDf<- data %>% filter(Country %in% countryDf$Country) %>% 
   select(DevType) %>% 
   group_by(DevType) %>% 
+  #creating a new column which has the count
   summarise(Count = n()) %>% 
   filter(Count > 100)
 
