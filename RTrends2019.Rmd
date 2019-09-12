@@ -251,3 +251,41 @@ DevTypeDf
 
 So most of the respondents from the top 10 countries were __Full stack developers__ and __backend developers__.
 
+
+### Let's check if Indian,American and German respondents had what job ?
+
+
+```{r warning=FALSE,message=FALSE}
+
+DevIndia<- data %>% filter(Country == "India") %>% 
+  select(DevType) %>% 
+  group_by(DevType) %>% 
+  summarise(Count=n()) %>% 
+  arrange(desc(Count)) %>% 
+  top_n(10)
+
+
+DevUs<- data %>% filter(Country == "United States") %>% 
+  select(DevType) %>% 
+  group_by(DevType) %>% 
+  summarise(Count=n()) %>% 
+  arrange(desc(Count)) %>% 
+  top_n(10)
+
+
+
+DevGer<- data %>% filter(Country == "Germany") %>% 
+  select(DevType) %>% 
+  group_by(DevType) %>% 
+  summarise(Count=n()) %>% 
+  arrange(desc(Count)) %>% 
+  top_n(10)
+
+DevPak<- data %>% filter(Country == "Pakistan") %>% 
+  select(DevType) %>% 
+  group_by(DevType) %>% 
+  summarise(Count=n()) %>% 
+  arrange(desc(Count)) %>% 
+  top_n(10)
+```
+
