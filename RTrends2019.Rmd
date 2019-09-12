@@ -1,6 +1,8 @@
 ---
 title: "Analyzing R user Trends"
-output: html_notebook
+output:
+  html_notebook: default
+  pdf_document: default
 ---
 
 ## Overview
@@ -241,9 +243,11 @@ DevTypeDf<- data %>% filter(Country %in% countryDf$Country) %>%
 
 DevTypeDf<-na.omit(DevTypeDf)
 
+DevTypeDf
+
 
 
 ```
 
-
+So most of the respondents from the top 10 countries were __Full stack developers__ and __backend developers__.
 
