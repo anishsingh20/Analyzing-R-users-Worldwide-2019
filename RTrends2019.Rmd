@@ -292,16 +292,31 @@ DevGer<- data %>% filter(Country == "Germany") %>%
 ```
 
 
+
+
+
 Creating the Plot: 
 
 
 
 ```{r warning=FALSE,message=FALSE}
 
-par(mfrow=c(2,2))
   
+hchart(DevIndia,hcaes(x=DevIndia$DevType,y=DevIndia$Count),type="column") %>%  
+  hc_exporting(enabled = TRUE) %>%
+  hc_title(text="Barplot of top developers in India",align="center") %>%
+  hc_add_theme(hc_theme_elementary()) 
+
+hchart(DevUs,hcaes(x=DevUs$DevType,y=DevUs$Count),type="column") %>%  
+  hc_exporting(enabled = TRUE) %>%
+  hc_title(text="Barplot of top developers in US",align="center") %>%
+  hc_add_theme(hc_theme_elementary()) 
 
 
+hchart(DevGer,hcaes(x=DevGer$DevType,y=DevGer$Count),type="column") %>%  
+  hc_exporting(enabled = TRUE) %>%
+  hc_title(text="Barplot of top developers in Germany",align="center") %>%
+  hc_add_theme(hc_theme_elementary()) 
 
 ```
 
