@@ -245,8 +245,6 @@ DevTypeDf<-na.omit(DevTypeDf)
 
 DevTypeDf
 
-
-
 ```
 
 So most of the respondents from the top 10 countries were __Full stack developers__ and __backend developers__.
@@ -338,14 +336,16 @@ LEt's create a helper function
 
 ```{r message=FALSE,warning=FALSE}
 
-
-DrillDown <- function(data,filt,sel,gp) {
+# Drilldown(dataset,Filter_by_var,filter_by_val,Select_var,grou_by_var)
+DrillDown <- function(data,filt,val,sel,gp) {
   
-  df <- data %>% filter(Country=="India") %>% 
+  df <- data %>% filter(filt==val) %>% 
   select(JobSat) %>% 
   group_by(JobSat) %>% 
   summarise(Count=n()) %>% 
   arrange(desc(Count))
+  
+  df<-na.omit(df)
   
   df
 
@@ -362,28 +362,11 @@ DrillDown <- function(data,filt,sel,gp) {
 ```{r warning=FALSE,message=FALSE}
 
 
-JobSatIndia <- DrillDown(data,)
+JobSatIndia <- DrillDown(data,Country,"India",JobSat,JobSat)
 
+JobSatUS <-  DrillDown(data,Country,"United States",JobSat,JobSat)
 
-JobSatIndia <- data %>% filter(Country=="India") %>% 
-  select(JobSat) %>% 
-  group_by(JobSat) %>% 
-  summarise(Count=n()) %>% 
-  arrange(desc(Count))
-
-
-JobSatUS <- data %>% filter(Country=="United States") %>% 
-  select(JobSat) %>% 
-  group_by(JobSat) %>% 
-  summarise(Count=n()) %>% 
-  arrange(desc(Count))
-
-
-JobSatGer <- data %>% filter(Country=="Germany") %>% 
-  select(JobSat) %>% 
-  group_by(JobSat) %>% 
-  summarise(Count=n()) %>% 
-  arrange(desc(Count))
+JobSatUk <- DrillDown(data,Country,"Argentina",JobSat,JobSat)
 
 
 
