@@ -320,3 +320,10 @@ hchart(DevGer,hcaes(x=DevGer$DevType,y=DevGer$Count),type="column") %>%
 
 ```
 
+
+
+
+### Let's check the Job satisfaction of the Respondents:
+
+
+
