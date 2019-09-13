@@ -281,11 +281,27 @@ DevGer<- data %>% filter(Country == "Germany") %>%
   arrange(desc(Count)) %>% 
   top_n(10)
 
-DevPak<- data %>% filter(Country == "Pakistan") %>% 
+DevGer<- data %>% filter(Country == "Germany") %>% 
   select(DevType) %>% 
   group_by(DevType) %>% 
   summarise(Count=n()) %>% 
   arrange(desc(Count)) %>% 
   top_n(10)
+
+
+```
+
+
+Creating the Plot: 
+
+
+
+```{r warning=FALSE,message=FALSE}
+
+par(mfrow=c(2,2))
+  
+
+
+
 ```
 
