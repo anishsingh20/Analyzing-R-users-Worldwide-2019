@@ -334,9 +334,36 @@ table(JobSat)
 ```
 
 
+LEt's create a helper function 
+
+```{r message=FALSE,warning=FALSE}
+
+
+DrillDown <- function(data,filt,sel,gp) {
+  
+  df <- data %>% filter(Country=="India") %>% 
+  select(JobSat) %>% 
+  group_by(JobSat) %>% 
+  summarise(Count=n()) %>% 
+  arrange(desc(Count))
+  
+  df
+
+  
+  
+  
+}
+
+
+```
+
 #### Job satisfaction of Respondents from specific countries:
 
 ```{r warning=FALSE,message=FALSE}
+
+
+JobSatIndia <- DrillDown(data,)
+
 
 JobSatIndia <- data %>% filter(Country=="India") %>% 
   select(JobSat) %>% 
@@ -350,6 +377,15 @@ JobSatUS <- data %>% filter(Country=="United States") %>%
   group_by(JobSat) %>% 
   summarise(Count=n()) %>% 
   arrange(desc(Count))
+
+
+JobSatGer <- data %>% filter(Country=="Germany") %>% 
+  select(JobSat) %>% 
+  group_by(JobSat) %>% 
+  summarise(Count=n()) %>% 
+  arrange(desc(Count))
+
+
 
 
 ```
