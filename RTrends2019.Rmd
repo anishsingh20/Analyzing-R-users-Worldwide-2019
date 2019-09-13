@@ -331,10 +331,30 @@ This is a really interesting feature to analyze. We can analyze which specific J
 
 table(JobSat)
 
+```
+
+
+Now we can see it for specific countries.
+
+```{r warning=FALSE,message=FALSE}
+
+JobSatIndia <- data %>% filter(Country=="India") %>% 
+  select(JobSat) %>% 
+  group_by(JobSat) %>% 
+  summarise(Count=n()) %>% 
+  arrange(desc(Count))
+
+
+JobSatIndia <- data %>% filter(Country=="India") %>% 
+  select(JobSat) %>% 
+  group_by(JobSat) %>% 
+  summarise(Count=n()) %>% 
+  arrange(desc(Count))
 
 
 ```
 
 
 
-#### We can also analyze the Job Factors 
+
+#### We can also analyze the Job Factors
