@@ -334,7 +334,7 @@ table(JobSat)
 ```
 
 
-Now we can see it for specific countries.
+#### Job satisfaction of Respondents from specific countries:
 
 ```{r warning=FALSE,message=FALSE}
 
@@ -345,7 +345,7 @@ JobSatIndia <- data %>% filter(Country=="India") %>%
   arrange(desc(Count))
 
 
-JobSatIndia <- data %>% filter(Country=="India") %>% 
+JobSatUS <- data %>% filter(Country=="United States") %>% 
   select(JobSat) %>% 
   group_by(JobSat) %>% 
   summarise(Count=n()) %>% 
