@@ -325,5 +325,16 @@ hchart(DevGer,hcaes(x=DevGer$DevType,y=DevGer$Count),type="column") %>%
 
 ### Let's check the Job satisfaction of the Respondents:
 
+This is a really interesting feature to analyze. We can analyze which specific Job roles were most satisfied or in the list of top 10 countries how many respondents were satisfied with their Jobs etc.
+
+```{r warning=FALSE,message=FALSE}
+
+table(JobSat)
 
 
+
+```
+
+
+
+#### We can also analyze the Job Factors 
