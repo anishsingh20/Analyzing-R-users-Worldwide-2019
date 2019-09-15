@@ -337,12 +337,11 @@ LEt's create a helper function
 ```{r message=FALSE,warning=FALSE}
 
 # Drilldown(dataset,Filter_by_var,filter_by_val,Select_var,grou_by_var)
-DrillDown <- function(data,filt,val,sel,gp) {
+DrillDown <- function(data,filt,val,group) {
   
-  df <- data %>% filter(filt==val) %>% 
-  select(JobSat) %>% 
-  group_by(JobSat) %>% 
-  summarise(Count=n()) %>% 
+  df <- data %>% filter(filt=="val") %>% 
+  group_by(group) %>% 
+  summarise(Count=n()) %>%
   arrange(desc(Count))
   
   df<-na.omit(df)
@@ -357,7 +356,7 @@ DrillDown <- function(data,filt,val,sel,gp) {
 
 ```
 
-#### Job satisfaction of Respondents from specific countries:
+#### Job satisfaction and Career satisfaction of Respondents from specific countries:
 
 ```{r warning=FALSE,message=FALSE}
 
@@ -367,6 +366,16 @@ JobSatUS <-  DrillDown(data,Country,"United States",JobSat,JobSat)
 
 JobSatUk <- DrillDown(data,Country,"Argentina",JobSat,JobSat)
 
+
+#Career Satisfaction
+CarSatIndia <- data %>% filter(data$Country=="India") %>% 
+  group_by(data$CareerSat) %>% 
+  summarise(Count=n()) %>%
+  arrange(desc(Count))
+
+CarSatUS <-  DrillDown(data,Country,"United States",CareerSat)
+
+CarSatUk <- DrillDown(data,Country,"Argentina",JobSat,JobSat)
 
 ```
 
