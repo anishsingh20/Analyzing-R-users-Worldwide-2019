@@ -337,10 +337,10 @@ LEt's create a helper function
 ```{r message=FALSE,warning=FALSE}
 
 # Drilldown(dataset,Filter_by_var,filter_by_val,Select_var,grou_by_var)
-DrillDown <- function(data,filt,val,group) {
-  
-  df <- data %>% filter(filt=="val") %>% 
-  group_by(group) %>% 
+DrillDown <- function(data,fil_var,val,gp_var) {
+ 
+  df <- data %>% filter(fil_var==val) %>% 
+  group_by(gp_var) %>% 
   summarise(Count=n()) %>%
   arrange(desc(Count))
   
@@ -368,14 +368,20 @@ JobSatUk <- DrillDown(data,Country,"Argentina",JobSat,JobSat)
 
 
 #Career Satisfaction
-CarSatIndia <- data %>% filter(data$Country=="India") %>% 
-  group_by(data$CareerSat) %>% 
+CarSatIndia <- data %>% filter(Country=="India") %>% 
+  group_by(CareerSat) %>% 
   summarise(Count=n()) %>%
   arrange(desc(Count))
 
-CarSatUS <-  DrillDown(data,Country,"United States",CareerSat)
+CarSatUS <-data %>% filter(Country=="United States") %>% 
+  group_by(CareerSat) %>% 
+  summarise(Count=n()) %>%
+  arrange(desc(Count))
 
-CarSatUk <- DrillDown(data,Country,"Argentina",JobSat,JobSat)
+CarSatUk <- data %>% filter(Country=="United Kingdom") %>% 
+  group_by(CareerSat) %>% 
+  summarise(Count=n()) %>%
+  arrange(desc(Count))
 
 ```
 
