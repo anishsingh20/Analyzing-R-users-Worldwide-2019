@@ -361,7 +361,6 @@ DrillDown <- function(data,filt,val,sel,gp) {
 
 ```{r warning=FALSE,message=FALSE}
 
-
 JobSatIndia <- DrillDown(data,Country,"India",JobSat,JobSat)
 
 JobSatUS <-  DrillDown(data,Country,"United States",JobSat,JobSat)
@@ -369,10 +368,7 @@ JobSatUS <-  DrillDown(data,Country,"United States",JobSat,JobSat)
 JobSatUk <- DrillDown(data,Country,"Argentina",JobSat,JobSat)
 
 
-
-
 ```
-
 
 
 
