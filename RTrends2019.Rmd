@@ -362,6 +362,16 @@ DrillDown <- function(data,fil_var,val,gp_var) {
 }
 
 
+#A wrapper function to plot barplots
+
+BuildBarPlot <- function(data,x,y,color) {
+
+par(mfrow(2,2))
+
+Barplot <- ggplot()
+
+
+}
 ```
 
 #### Job satisfaction and Career satisfaction of Respondents from specific countries:
