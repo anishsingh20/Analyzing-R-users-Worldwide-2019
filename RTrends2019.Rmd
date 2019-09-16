@@ -353,6 +353,7 @@ DrillDown <- function(data,fil_var,val,gp_var) {
   arrange(desc(Count))
   
   df<-na.omit(df)
+  names(df)[1] <- c("Satisfaction")
   
   df
 
@@ -364,11 +365,12 @@ DrillDown <- function(data,fil_var,val,gp_var) {
 
 #A wrapper function to plot barplots
 
-BuildBarPlot <- function(data,x,y,color) {
+BuildBarPlot <- function(data,x,y) {
 
-par(mfrow(2,2))
+  Barplot <- ggplot(data,aes(x,y)) + 
+  geom_col()
 
-Barplot <- ggplot()
+Barplot
 
 
 }
@@ -389,8 +391,16 @@ JobSatChina <- DrillDown(data,Country,"China",JobSat)
 
 JobSatJapan <- DrillDown(data,Country,"Japan",JobSat)   
 
+dfCoun<-c(JobSatIndia,JobSatUS,JobSatChina,JobSatJapan)
 
 
+
+par(mfrow=c(2,1))
+BuildBarPlot(JobSatIndia,JobSatIndia$Satisfaction,JobSatIndia$Count)
+BuildBarPlot(JobSatUS,JobSatUS$Satisfaction,JobSatUS$Count)
+
+
+ 
 #Checking the career Satisfaction of different countries
 CarSatIndia <-  DrillDown(data,Country,"India",CareerSat)
 
@@ -406,3 +416,8 @@ CarSatJapan <- DrillDown(data,Country,"Japan",CareerSat)
 
 
 #### We can also analyze the Job Factors
+
+
+```{r message=FALSE,warning=FALSE}
+
+```
