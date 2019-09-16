@@ -367,10 +367,7 @@ DrillDown <- function(data,fil_var,val,gp_var) {
 
 BuildBarPlot <- function(data,x,y) {
 
-  Barplot <- ggplot(data,aes(x,y)) + 
-  geom_col()
-
-Barplot
+  
 
 
 }
@@ -395,9 +392,6 @@ dfCoun<-c(JobSatIndia,JobSatUS,JobSatChina,JobSatJapan)
 
 
 
-par(mfrow=c(2,1))
-BuildBarPlot(JobSatIndia,JobSatIndia$Satisfaction,JobSatIndia$Count)
-BuildBarPlot(JobSatUS,JobSatUS$Satisfaction,JobSatUS$Count)
 
 
  
