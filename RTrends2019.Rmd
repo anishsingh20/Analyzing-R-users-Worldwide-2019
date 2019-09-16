@@ -375,15 +375,21 @@ JobSatUS <-  DrillDown(data,Country,"United States",JobSat)
 
 JobSatUk <- DrillDown(data,Country,"Argentina",JobSat)
 
+JobSatChina <- DrillDown(data,Country,"China",JobSat)   
+
+JobSatJapan <- DrillDown(data,Country,"Japan",JobSat)   
+
+
 
 #Checking the career Satisfaction of different countries
 CarSatIndia <-  DrillDown(data,Country,"India",CareerSat)
 
 CarSatUS    <- DrillDown(data,Country,"United States",CareerSat)   
 
-CarSatUk <- DrillDown(data,Country,"United Kingdom",CareerSat)   
+CarSatUk <- DrillDown(data,Country,"United Kingdom",CareerSat)  
 
-
+CarSatChina <- DrillDown(data,Country,"China",CareerSat)   
+CarSatJapan <- DrillDown(data,Country,"Japan",CareerSat)   
 
 ```
 
