@@ -341,14 +341,14 @@ DrillDown <- function(data,fil_var,val,gp_var) {
  
   attach(data)
   #Initializing new columns for the dataframe data
-  data["fil"]<-NA
-  data["gp"]<-NA
+  data["fil_var"]<-NA
+  data["gp_var"]<-NA
   
   #copying the values of args to the initialized columns which would be used in the data aggregation below.
-  data$fil<-fil_var
-  data$gp<-gp_var
-  df <- data %>% filter(fil==val) %>% 
-  group_by(gp) %>% 
+  data$fil_var<-fil_var
+  data$gp_var<-gp_var
+  df <- data %>% filter(fil_var==val) %>% 
+  group_by(gp_var) %>% 
   summarise(Count=n()) %>%
   arrange(desc(Count))
   
@@ -373,21 +373,15 @@ JobSatIndia <- DrillDown(data,Country,"India",JobSat)
 
 JobSatUS <-  DrillDown(data,Country,"United States",JobSat)
 
-JobSatUk <- DrillDown(data,Country,"Argentina",JobSat,JobSat)
+JobSatUk <- DrillDown(data,Country,"Argentina",JobSat)
 
 
-#Checking the career Satisfaction
+#Checking the career Satisfaction of different countries
 CarSatIndia <-  DrillDown(data,Country,"India",CareerSat)
 
-CarSatUS <-data %>% filter(Country=="United States") %>% 
-  group_by(CareerSat) %>% 
-  summarise(Count=n()) %>%
-  arrange(desc(Count))
+CarSatUS    <- DrillDown(data,Country,"United States",CareerSat)   
 
-CarSatUk <- data %>% filter(Country=="United Kingdom") %>% 
-  group_by(CareerSat) %>% 
-  summarise(Count=n()) %>%
-  arrange(desc(Count))
+CarSatUk <- DrillDown(data,Country,"United Kingdom",CareerSat)   
 
 
 
