@@ -391,9 +391,15 @@ CarSatUk <- DrillDown(data,Country,"United Kingdom",CareerSat)
 CarSatChina <- DrillDown(data,Country,"China",CareerSat)   
 CarSatJapan <- DrillDown(data,Country,"Japan",CareerSat)   
 
+
+
 ```
 
+For almost all the countries the Job and career satisfactions were same. Most of the people were __SLightly Satisfied__ .
 
+Whereas in Country like US, most of the respondents were __Very Satisfied__. 
+
+Only __China__ had most of the respondents which were __Slightly Satisfied__ and __Slightly Dissatisfied__ .
 
 #### We can also analyze the Job Factors
 
