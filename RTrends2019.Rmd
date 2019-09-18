@@ -332,7 +332,7 @@ table(JobSat)
 ```
 
 
-LEt's create a helper function 
+Let's create a helper function 
 
 ```{r message=FALSE,warning=FALSE}
 
@@ -362,15 +362,6 @@ DrillDown <- function(data,fil_var,val,gp_var) {
   
 }
 
-
-#A wrapper function to plot barplots
-
-BuildBarPlot <- function(data,x,y) {
-
-  
-
-
-}
 ```
 
 #### Job satisfaction and Career satisfaction of Respondents from specific countries:
@@ -387,11 +378,6 @@ JobSatUk <- DrillDown(data,Country,"Argentina",JobSat)
 JobSatChina <- DrillDown(data,Country,"China",JobSat)   
 
 JobSatJapan <- DrillDown(data,Country,"Japan",JobSat)   
-
-dfCoun<-c(JobSatIndia,JobSatUS,JobSatChina,JobSatJapan)
-
-
-
 
 
  
