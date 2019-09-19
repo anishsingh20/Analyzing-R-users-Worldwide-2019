@@ -423,7 +423,18 @@ hchart(TOPJF,hcaes(x=TOPJF$JobFactors,y=TOPJF$Count),type="column",color="#FDE72
 JfIndia <- DrillDown(data,Country,"India",JobFactors)
 
 JfIndia <- JfIndia %>% 
-  top_n(20)
+  top_n(10)
+
+
+```
+So in India respondents mostly cared for factors such as __*'Languages, frameworks, and other technologies I'd be working with;Office environment or company culture;Opportunities for professional development'*__
+
+
+Let's see for the US respondents
+
+```{r warning=FALSE,message=FALSE}
+
+
 
 
 ```
