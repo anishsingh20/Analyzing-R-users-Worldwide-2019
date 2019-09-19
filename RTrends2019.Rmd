@@ -442,4 +442,15 @@ JfUS <- JfUS %>%
   top_n(10)
 
 
+JfChina <- DrillDown(data,Country,"China",JobFactors)
+
+JfChina <- JfChina %>% 
+  top_n(10)
+
+
+
+JfJapan <- DrillDown(data,Country,"Japan",JobFactors)
+
+JfJapan <- JfJapan %>% 
+  top_n(10)
 ```
