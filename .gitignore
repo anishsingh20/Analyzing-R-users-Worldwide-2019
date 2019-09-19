@@ -6,6 +6,12 @@ bin-release/
 
 data/*
 
+.DS_Store
+
+.RData
+
+.Rhistory
+
 # Other files and folders
 .settings/
 
