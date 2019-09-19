@@ -414,10 +414,12 @@ TOPJF <- data %>% group_by(JobFactors) %>%
 
 TOPJF <- na.omit(TOPJF)
 
+
 hchart(TOPJF,hcaes(x=TOPJF$JobFactors,y=TOPJF$Count),type="column",color="#FDE725") %>%  
   hc_exporting(enabled = TRUE) %>%
   hc_title(text="Job Factors which matter the most",align="center") %>%
   hc_add_theme(hc_theme_elementary()) 
+
 
 
 JfIndia <- DrillDown(data,Country,"India",JobFactors)
@@ -434,7 +436,10 @@ Let's see for the US respondents
 
 ```{r warning=FALSE,message=FALSE}
 
+JfUS <- DrillDown(data,Country,"United States",JobFactors)
 
+JfUS <- JfUS %>% 
+  top_n(10)
 
 
 ```
