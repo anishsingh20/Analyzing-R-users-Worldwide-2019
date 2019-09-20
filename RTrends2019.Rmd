@@ -451,6 +451,24 @@ JfChina <- JfChina %>%
 
 JfJapan <- DrillDown(data,Country,"Japan",JobFactors)
 
-JfJapan <- JfJapan %>% 
+JfJapan <- na.omit(JfJapan) %>% 
   top_n(10)
+
+
+
 ```
+
+
+
+#### Let's check the Weekly Working hours of the Respondents
+
+
+```{r warning=FALSE,message=FALSE}
+
+mean(na.omit(WorkWeekHrs))
+
+
+```
+
+
+So the average working hours were __42__ hours.
