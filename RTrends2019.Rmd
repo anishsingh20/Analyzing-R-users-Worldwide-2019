@@ -465,9 +465,9 @@ JfJapan <- na.omit(JfJapan) %>%
 
 ```{r warning=FALSE,message=FALSE}
 
-mean(na.omit(WorkWeekHrs))
 
-summary(na.omit(WorkWeekHrs))
+
+
 
 ```
 
