@@ -465,7 +465,12 @@ JfJapan <- na.omit(JfJapan) %>%
 
 ```{r warning=FALSE,message=FALSE}
 
+mean(na.omit(WorkWeekHrs))
 
+
+CountryWorkHrs<- data %>% select(Country,WorkWeekHrs)
+
+  
 
 
 
