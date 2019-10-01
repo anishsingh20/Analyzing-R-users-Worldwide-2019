@@ -472,10 +472,13 @@ CountryWorkHrs<- data %>% select(Country,WorkWeekHrs) %>%
   group_by(Country) %>% 
   summarise(Mean =  mean(na.omit(WorkWeekHrs)))
 
-  
+
+# Finding the top 20 countries with highest average weekly work hours.
+TopCountryWork<- CountryWorkHrs %>% arrange(desc(CountryWorkHrs$Mean)) %>% 
+  top_n(20)
 
 
-
+#Finding top 20 countries 
 ```
 
 
