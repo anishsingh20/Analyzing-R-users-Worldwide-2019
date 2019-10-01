@@ -468,7 +468,9 @@ JfJapan <- na.omit(JfJapan) %>%
 mean(na.omit(WorkWeekHrs))
 
 
-CountryWorkHrs<- data %>% select(Country,WorkWeekHrs)
+CountryWorkHrs<- data %>% select(Country,WorkWeekHrs) %>% 
+  group_by(Country) %>% 
+  summarise(Mean =  mean(na.omit(WorkWeekHrs)))
 
   
 
