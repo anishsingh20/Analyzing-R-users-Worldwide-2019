@@ -478,7 +478,14 @@ TopCountryWork<- CountryWorkHrs %>% arrange(desc(CountryWorkHrs$Mean)) %>%
   top_n(20)
 
 
-#Finding top 20 countries 
+
+hchart(TopCountryWork,hcaes(x=TopCountryWork$Country,y=TopCountryWork$Mean),type="column",color="#ADE554") %>%  
+  hc_exporting(enabled = TRUE) %>%
+  hc_title(text="Highest weekly work hours",align="center") %>%
+  hc_add_theme(hc_theme_elementary()) 
+
+
+
 ```
 
 
