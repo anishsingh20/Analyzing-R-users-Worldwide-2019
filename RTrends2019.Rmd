@@ -490,3 +490,6 @@ hchart(TopCountryWork,hcaes(x=TopCountryWork$Country,y=TopCountryWork$Mean),type
 
 
 So the average working hours were __42__ hours.
+
+
+We can notice that the Country where the weekly work hours were highest is __Finland__ followed by __Norway__.
