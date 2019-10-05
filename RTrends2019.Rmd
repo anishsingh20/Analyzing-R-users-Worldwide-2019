@@ -513,6 +513,11 @@ WorkChallTop <- data %>% group_by(WorkChallenge) %>%
 
 WorkChallTop <- na.omit(WorkChallTop)
 
+hchart(WorkChallTop,hcaes(x=WorkChallTop$WorkChallenge,y=WorkChallTop$Count),type="column",color="#FEA554") %>%  
+  hc_exporting(enabled = TRUE) %>%
+  hc_title(text="Top Work challenges",align="center") %>%
+  hc_add_theme(hc_theme_elementary()) 
+
 
 WorkChallTop
 
@@ -526,3 +531,6 @@ The top Work challenges included things like :
 4) Meetings.
 5)Non-work commitments (parenting, school work, hobbies, etc.)
 6) Toxic Work environment.
+
+
+
