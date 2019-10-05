@@ -495,3 +495,15 @@ So the average working hours were __42__ hours.
 We can notice that the Country where the weekly work hours were highest is __Finland__ followed by __Norway__.
 
 
+
+--------------------------------
+
+
+### Let's see the challenges that the Respondents face at work ?
+
+
+```{r message=FALSE,warning=FALSE}
+
+WorkChallTop <- 
+
+```
