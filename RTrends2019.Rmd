@@ -504,6 +504,25 @@ We can notice that the Country where the weekly work hours were highest is __Fin
 
 ```{r message=FALSE,warning=FALSE}
 
-WorkChallTop <- 
+WorkChallTop <- data %>% group_by(WorkChallenge) %>% 
+  select(WorkChallenge) %>% 
+  summarise(Count = n()) %>% 
+  arrange(desc(Count)) %>% 
+  top_n(15)
+
+
+WorkChallTop <- na.omit(WorkChallTop)
+
+
+WorkChallTop
 
 ```
+
+The top Work challenges included things like :
+
+1) Being tasked with non-development work.
+2) Not enough people for the workload.
+3) Distracting work environment.
+4) Meetings.
+5)Non-work commitments (parenting, school work, hobbies, etc.)
+6) Toxic Work environment.
