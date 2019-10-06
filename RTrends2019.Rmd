@@ -533,4 +533,26 @@ The top Work challenges included things like :
 6) Toxic Work environment.
 
 
+------------------------
+
+
+### The top languages the respondents have worked with ?
+
+
+```{r message=FALSE,warning=FALSE}
+
+
+TopLang <- data %>% group_by(LanguageWorkedWith) %>% 
+  summarise(Count = n()) %>% 
+  arrange(desc(Count)) %>% 
+  top_n(20)
+
+TopLang<-na.omit(TopLang)
+
+
+
+```
+
+
+
 
