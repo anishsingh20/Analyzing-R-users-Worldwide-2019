@@ -10,3 +10,28 @@ output:
 ## Overview
 
 Stackoverflow recently released the anonymized results of their 2019 annual developer survey. The goal of this project is to analyse various trends for R developers worldwide.
+
+
+
+First, let's filter all the R users from the dataset
+
+
+
+```{r message=FALSE,warning=FALSE}
+
+#reading necessary libraries
+require(tidyverse)
+require(countrycode)
+require(highcharter)
+require(ggplot2)
+
+#reading the data
+data <- read_csv("data/survey_results_public.csv")
+attach(data)
+
+
+
+RUsers<- data %>% filter(LanguageWorkedWith=="R") 
+
+
+```
