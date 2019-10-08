@@ -31,7 +31,16 @@ attach(data)
 
 
 
-RUsers<- data %>% filter(LanguageWorkedWith=="R") 
+RUsers<- data %>% 
+  filter(grepl('^R$', LanguageWorkedWith) | grepl(';R$', LanguageWorkedWith) | 
+           grepl(';R;', LanguageWorkedWith) | grepl('^R;', LanguageWorkedWith)) %>% 
+  filter(MainBranch %in% c('I am a developer by profession', 
+                           'I am not primarily a developer, but I write code sometimes as part of my work')) %>% 
+  filter(Employment %in% c('Employed full-time', 
+                           'Employed part-time', 
+                           'Independent contractor, freelancer, or self-employed')) %>% 
+  filter(!grepl('Other Country', Country)) %>% 
+  filter(!is.na(Country), !is.na(ConvertedComp), ConvertedComp > 0) 
 
 
 ```
