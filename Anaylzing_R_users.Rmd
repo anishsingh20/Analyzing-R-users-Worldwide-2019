@@ -43,4 +43,30 @@ RUsers<- data %>%
   filter(!is.na(Country), !is.na(ConvertedComp), ConvertedComp > 0) 
 
 
+attach(RUsers)
+
+```
+
+
+
+### Let's start with the Profession of R Users
+
+
+```{r message=FALSE,warning=FALSE}
+
+table(MainBranch)
+
+
+```
+
+So we can notice that most of the R users were developers.
+
+
+Let's check which country has the most R users
+
+
+```{r message=FALSE,warning=FALSE}
+
+RCountry <- RUsers %>% 
+
 ```
