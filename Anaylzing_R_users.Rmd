@@ -67,6 +67,14 @@ Let's check which country has the most R users
 
 ```{r message=FALSE,warning=FALSE}
 
-RCountry <- RUsers %>% 
+RCountry <- RUsers %>% group_by(Country) %>% 
+  select(Country) %>% 
+  summarise(Count = n()) %>% 
+  arrange(desc(Count)) %>% 
+  top_n(20)
 
 ```
+
+So US had most R users, followed by Germany , UK then India.
+
+
