@@ -77,12 +77,14 @@ RCountry <- RUsers %>% group_by(Country) %>%
 
 We can see that most R users are in US followed by Germany , UK then India.
 
-Let's check what do R users professionaly do : 
+
+#### Let's check what do R users professionaly do and their Employment as well: 
 
 
 ```{r message=FALSE, warning=FALSE}
 
 table(MainBranch)
+table(Employment)
 
 ```
-So as we can notice, most of them are __developers__ followed by __students__.
+So as we can notice, most of them are __developers__ followed by __students__ and most of them are employed as Full time employees.
