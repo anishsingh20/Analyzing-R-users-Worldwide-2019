@@ -75,6 +75,6 @@ RCountry <- RUsers %>% group_by(Country) %>%
 
 ```
 
-As we Notice in the plot we see the most R users in US followed by Germany , UK then India.
+We can see that most R users are in US followed by Germany , UK then India.
 
 
