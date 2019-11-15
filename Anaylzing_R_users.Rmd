@@ -90,4 +90,14 @@ table(Employment)
 So as we can notice, most of them are __developers__ followed by __students__ and most of them are employed as Full time employees.
 
 
-### Let's now check the 
+### Let's now check the Education level of R users worldwide
+
+
+```{r warning=FALSE,message=FALSE}
+
+table(EdLevel)
+
+```
+So as we can see most of the R users hold  Master's degree followed by Bachelor's degree followed by doctoral degrees as well.
+
+
