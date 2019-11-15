@@ -109,3 +109,47 @@ table(UndergradMajor)
 
 ```
 Most of them hold a UG degree in CS and software engineering followed by mathematics and statistics.
+
+
+
+### let's analyze educations level and UG for top countries
+
+
+1) Let's start off with US
+
+```{r warning=FALSE,message=FALSE}
+
+USEduR <- RUsers %>% filter(Country=='United States') %>% 
+                    select(EdLevel) %>% 
+                    group_by(EdLevel) %>% 
+                    summarise(CountEdu=n()) %>% 
+                    arrange(desc(CountEdu))
+
+
+# also doing the same to find the count of UG studies of R users in US
+US_UG_R <- RUsers %>% filter(Country=='United States') %>% 
+                    select(UndergradMajor) %>% 
+                    group_by(UndergradMajor) %>% 
+                    summarise(CountUG=n()) %>% 
+                    arrange(desc(CountUG))
+
+
+# Now let's plot them
+
+
+
+
+```
+
+
+2) Let's check for India now:
+```{r warning=FALSE,message=FALSE}
+
+
+```
+
+
+3)Let's check for UK:
+```{r warning=FALSE,message=FALSE}
+
+```
