@@ -100,4 +100,12 @@ table(EdLevel)
 ```
 So as we can see most of the R users hold  Master's degree followed by Bachelor's degree followed by doctoral degrees as well.
 
+Let's also see the undergraduate degrees of the users.
 
+```{r message=FALSE,warning=FALSE}
+
+table(UndergradMajor)
+
+
+```
+Most of them hold a UG degree in CS and software engineering followed by mathematics and statistics.
