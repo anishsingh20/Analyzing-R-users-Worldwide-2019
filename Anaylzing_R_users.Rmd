@@ -47,7 +47,7 @@ attach(RUsers)
 
 ```
 
-
+Let's begin with *Uni-variate* analysis of variables, then slowly we can proceed with *bi-variate* and *multi-variate* analysis as well as soon as things start getting interesting.
 
 ### Let's start with the Profession of R Users
 
@@ -88,3 +88,6 @@ table(Employment)
 
 ```
 So as we can notice, most of them are __developers__ followed by __students__ and most of them are employed as Full time employees.
+
+
+### Let's now check the 
