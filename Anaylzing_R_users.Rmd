@@ -187,7 +187,7 @@ hchart(India_UG_R,hcaes(x=India_UG_R$UndergradMajor,y=India_UG_R$CountUG),type="
 
 3)Let's check for UK:
 ```{r warning=FALSE,message=FALSE}
-USEduR <- RUsers %>% filter(Country=='United States') %>% 
+UKEduR <- RUsers %>% filter(Country=='United Kingdom') %>% 
                     select(EdLevel) %>% 
                     group_by(EdLevel) %>% 
                     summarise(CountEdu=n()) %>% 
@@ -195,7 +195,7 @@ USEduR <- RUsers %>% filter(Country=='United States') %>%
 
 
 # also doing the same to find the count of UG studies of R users in US
-US_UG_R <- RUsers %>% filter(Country=='United States') %>% 
+UK_UG_R <- RUsers %>% filter(Country=='United Kingdom') %>% 
                     select(UndergradMajor) %>% 
                     group_by(UndergradMajor) %>% 
                     summarise(CountUG=n()) %>% 
