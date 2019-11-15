@@ -136,20 +136,82 @@ US_UG_R <- RUsers %>% filter(Country=='United States') %>%
 
 # Now let's plot them
 
+hchart(USEduR,hcaes(x=USEduR$EdLevel,y=USEduR$CountEdu),type="column",color="purple",name="Count") %>%  
+  hc_exporting(enabled = TRUE) %>%
+  hc_title(text="Education of R users in US",align="center") %>%
+  hc_add_theme(hc_theme_elementary()) 
 
-
+hchart(US_UG_R,hcaes(x=US_UG_R$UndergradMajor,y=US_UG_R$CountUG),type="column",color="yellow",name="Count") %>%  
+  hc_exporting(enabled = TRUE) %>%
+  hc_title(text="UG majors of R users in US",align="center") %>%
+  hc_add_theme(hc_theme_elementary()) 
+ 
 
 ```
 
 
 2) Let's check for India now:
 ```{r warning=FALSE,message=FALSE}
+# EdLevel
 
+IndiaEduR <- RUsers %>% filter(Country=='India') %>% 
+                    select(EdLevel) %>% 
+                    group_by(EdLevel) %>% 
+                    summarise(CountEdu=n()) %>% 
+                    arrange(desc(CountEdu))
+
+
+# also doing the same to find the count of UG studies of R users in US
+India_UG_R <- RUsers %>% filter(Country=='India') %>% 
+                    select(UndergradMajor) %>% 
+                    group_by(UndergradMajor) %>% 
+                    summarise(CountUG=n()) %>% 
+                    arrange(desc(CountUG))
+
+
+# Now let's plot them
+
+hchart(IndiaEduR,hcaes(x=IndiaEduR$EdLevel,y=IndiaEduR$CountEdu),type="column",color="green",name="Count") %>%  
+  hc_exporting(enabled = TRUE) %>%
+  hc_title(text="Education of R users in US",align="center") %>%
+  hc_add_theme(hc_theme_elementary()) 
+
+hchart(India_UG_R,hcaes(x=India_UG_R$UndergradMajor,y=India_UG_R$CountUG),type="column",color="orange",name="Count") %>%  
+  hc_exporting(enabled = TRUE) %>%
+  hc_title(text="UG majors of R users in US",align="center") %>%
+  hc_add_theme(hc_theme_elementary()) 
+ 
 
 ```
 
 
 3)Let's check for UK:
 ```{r warning=FALSE,message=FALSE}
+USEduR <- RUsers %>% filter(Country=='United States') %>% 
+                    select(EdLevel) %>% 
+                    group_by(EdLevel) %>% 
+                    summarise(CountEdu=n()) %>% 
+                    arrange(desc(CountEdu))
 
+
+# also doing the same to find the count of UG studies of R users in US
+US_UG_R <- RUsers %>% filter(Country=='United States') %>% 
+                    select(UndergradMajor) %>% 
+                    group_by(UndergradMajor) %>% 
+                    summarise(CountUG=n()) %>% 
+                    arrange(desc(CountUG))
+
+
+# Now let's plot them
+
+hchart(USEduR,hcaes(x=USEduR$EdLevel,y=USEduR$CountEdu),type="column",color="purple",name="Count") %>%  
+  hc_exporting(enabled = TRUE) %>%
+  hc_title(text="Education of R users in US",align="center") %>%
+  hc_add_theme(hc_theme_elementary()) 
+
+hchart(US_UG_R,hcaes(x=US_UG_R$UndergradMajor,y=US_UG_R$CountUG),type="column",color="yellow",name="Count") %>%  
+  hc_exporting(enabled = TRUE) %>%
+  hc_title(text="UG majors of R users in US",align="center") %>%
+  hc_add_theme(hc_theme_elementary()) 
+ 
 ```
