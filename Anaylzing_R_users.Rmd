@@ -206,12 +206,12 @@ UK_UG_R <- RUsers %>% filter(Country=='United Kingdom') %>%
 
 hchart(USEduR,hcaes(x=USEduR$EdLevel,y=USEduR$CountEdu),type="column",color="purple",name="Count") %>%  
   hc_exporting(enabled = TRUE) %>%
-  hc_title(text="Education of R users in US",align="center") %>%
+  hc_title(text="Education of R users in UK",align="center") %>%
   hc_add_theme(hc_theme_elementary()) 
 
 hchart(US_UG_R,hcaes(x=US_UG_R$UndergradMajor,y=US_UG_R$CountUG),type="column",color="yellow",name="Count") %>%  
   hc_exporting(enabled = TRUE) %>%
-  hc_title(text="UG majors of R users in US",align="center") %>%
+  hc_title(text="UG majors of R users in UK",align="center") %>%
   hc_add_theme(hc_theme_elementary()) 
  
 ```
