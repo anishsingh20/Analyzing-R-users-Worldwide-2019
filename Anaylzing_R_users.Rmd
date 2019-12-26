@@ -215,3 +215,16 @@ hchart(US_UG_R,hcaes(x=US_UG_R$UndergradMajor,y=US_UG_R$CountUG),type="column",c
   hc_add_theme(hc_theme_elementary()) 
  
 ```
+
+
+
+### Let's now analyze the Salaries of R users
+
+Let's start by  making a data table of R users country wise and ther median annual salary.
+
+```{r message=FALSE,warning=FALSE}
+
+
+
+
+```
