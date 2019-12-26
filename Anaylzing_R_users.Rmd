@@ -231,7 +231,7 @@ country_r_users_salary<- RUsers %>%  group_by(Country) %>%
 ```
 
 
-Let's create another table which is going to contain country and continent information.
+Let's create another table which is going to contain country and continent information. We will use a __countrycode()__ function to create  a new variable with the name of the continent or region to which each country belongs.
 
 ```{r message=FALSE,warning=FALSE}
 
