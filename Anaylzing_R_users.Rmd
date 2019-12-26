@@ -220,9 +220,14 @@ hchart(US_UG_R,hcaes(x=US_UG_R$UndergradMajor,y=US_UG_R$CountUG),type="column",c
 
 ### Let's now analyze the Salaries of R users
 
-Let's start by  making a data table of R users country wise and ther median annual salary.
+Let's start by  making a data table of R users country wise and ther median annual salary arranged by descending order of most R users country wise.
 
 ```{r message=FALSE,warning=FALSE}
+
+country_r_users_salary<- RUsers %>%  group_by(Country) %>% 
+  summarise(Count=n(), median_salary=round(median(ConvertedComp))) %>% 
+  arrange(desc(Count))
+
 
 
 
