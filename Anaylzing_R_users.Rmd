@@ -262,7 +262,7 @@ RUsers %>% left_join(Countries_db, by="Country") %>%
   scale_y_continuous(breaks = seq(0, 200000, by = 20000), 
                      labels = function(x) format(x, big.mark = ",", decimal.mark = '.', scientific = FALSE)
                      ) +
-  ggtitle("Distributions of R Users' Salaries by Country") +
+  ggtitle("R Users' Salaries by Country") +
   theme(plot.title = element_text(hjust = 0.5)) +
   scale_fill_discrete(name = "Continent")
 
@@ -270,8 +270,9 @@ RUsers %>% left_join(Countries_db, by="Country") %>%
 
 
 ```
+In the above plot the black lines in the boxes represent the median values i.e 50% of the population lies below it and 50% above it.
 
-We can notice that __United States__ offers the highest median salaries to R users of around __110,000 USD__, followed by Israel and Norway. And the lower half is fillled by Asian,South American and African countries.
+We can notice that __United States__ offers the highest median salaries to R users of around __110,000 USD__, followed by Israel and Norway. And the lower half is filled by Asian,South American and African countries.
 
 
 
