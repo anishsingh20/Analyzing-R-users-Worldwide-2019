@@ -383,3 +383,5 @@ RUsers %>%  filter(Country == 'United Kingdom') %>%
                           "4" = "40-49", "5" = "50-59", "6" = "60-69"))
 
 ```
+For UK we can notice that the annual salaries are highest for R users between ages 30-39.
+
