@@ -356,9 +356,10 @@ RUsers %>%  filter(Country == 'India') %>%
                           "4" = "40-49", "5" = "50.59" , "6" = "60-69"))
 ```
 
+For India we can notice that most of the R users lie within age 20-40, and their annual USD salaries are between 10,000 - 25,000$. 
 
 
-#### 4) United kingdom
+#### 3) United kingdom
 
 ```{r message=FALSE,warning=FALSE}
 
