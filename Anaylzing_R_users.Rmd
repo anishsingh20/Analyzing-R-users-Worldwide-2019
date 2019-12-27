@@ -246,6 +246,9 @@ Countries_db <- data %>% filter(!grepl('Other',Country)) %>%
 Let's now plot and analyze the salary distribution country wide.
 ConvertedComp is defined as “salary converted to annual USD salaries using the exchange rate on 2019-02-01, assuming 12 working months and 50 working weeks."
 
+
+Now, let's plot a boxplot of Countries and the median annual salaries of R users, colored by continent.
+
 ```{r warning=FALSE,message=FALSE}
 
 #let's modify the R table first
@@ -269,7 +272,7 @@ RUsers %>% left_join(Countries_db, by="Country") %>%
 ```
 
 
-Now, let's plot a boxplot of Countries and the median annual salaries of R users, colored by continent.
+
 
 
 ```{r warning=FALSE,message=FALSE}
