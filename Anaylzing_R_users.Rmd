@@ -271,7 +271,7 @@ RUsers %>% left_join(Countries_db, by="Country") %>%
 
 ```
 
-
+We can notice that __United States__ offers the highest median salaries to R users of around __110,000 USD__, followed by Israel and Norway. And the lower half is fillled by Asian,South American and African countries.
 
 
 
