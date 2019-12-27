@@ -279,14 +279,16 @@ We can notice that __United States__ offers the highest median salaries to R use
 
 
 
-1) United States
+
+
+#### 1) United States
 
 ```{r warning=FALSE,message=FALSE}
 
 RUsers %>%  filter(Country == 'United States') %>% 
             filter(!is.na(Age)) %>% 
             filter(Age >=20) %>% 
-            ggplot(aes(x=as.factor(floor)Age/10), y = ConvertedComp)) + 
+            ggplot(aes(x=as.factor(floor(Age/10)), y = ConvertedComp)) + 
             geom_boxplot(outlier.shape = NA) + 
             coord_cartesian(ylim = c(0,300000)) + 
             geom_jitter(aes(as.factor(floor(Age/10)),ConvertedComp), 
@@ -306,4 +308,14 @@ RUsers %>%  filter(Country == 'United States') %>%
 
 
 ```
+So we can see that the highest salaries is for ages between 50-60 which is expected.
 
+
+
+#### 2) India 
+
+
+```{r warning=FALSE,message=FALSE}
+
+
+```
