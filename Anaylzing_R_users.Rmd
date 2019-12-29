@@ -390,6 +390,7 @@ For UK we can notice that the annual salaries are highest for R users between ag
 
 
 ```{r warning=FALSE,message=FALSE}
+
 RUsers %>%  filter(Country == 'Norway') %>% 
             filter(!is.na(Age)) %>% 
             filter(Age >=20) %>% 
@@ -414,3 +415,32 @@ RUsers %>%  filter(Country == 'Norway') %>%
 
 
 For Norway, we can notice that the annual median salaries are almost the same for all age groups.
+
+
+
+#### Canada
+
+```{r warning=FALSE,message=FALSE}
+
+RUsers %>%  filter(Country == 'Canada') %>% 
+            filter(!is.na(Age)) %>% 
+            filter(Age >=20) %>% 
+            ggplot(aes(x=as.factor(floor(Age/10)), y = ConvertedComp)) + 
+            geom_boxplot(outlier.shape = NA) + 
+            coord_cartesian(ylim = c(0,300000)) + 
+            geom_jitter(aes(as.factor(floor(Age/10)),ConvertedComp), 
+                        position= position_jitter(width = 0.1, height = 0),
+                        alpha=0.8,
+                        size=1) + 
+            scale_y_continuous(breaks = seq(0,300000,by=20000),
+                               labels = function(x) format(x,big.mark = ",",decimal.mark ='.', scientific = FALSE)) +
+            ylab('Annual USD salaries') + 
+            xlab('Age bin(years)') + 
+            ggtitle("Distributions of R users Salaries by Age bin for Canada") + 
+            theme(plot.title = element_text(hjust = 0.5)) +
+            scale_x_discrete(labels=c("2" = "20-29", "3" = "30-39",
+                          "4" = "40-49", "5" = "50-59", "6" = "60-69"))
+
+
+
+```
