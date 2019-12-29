@@ -439,8 +439,12 @@ RUsers %>%  filter(Country == 'Canada') %>%
             ggtitle("Distributions of R users Salaries by Age bin for Canada") + 
             theme(plot.title = element_text(hjust = 0.5)) +
             scale_x_discrete(labels=c("2" = "20-29", "3" = "30-39",
-                          "4" = "40-49", "5" = "50-59", "6" = "60-69"))
+                          "4" = "40-49", "5" = "50-59"))
 
 
 
 ```
+
+
+Canada also has the same pattern i.e higher salaries for professionals in ages 50-59.
+
