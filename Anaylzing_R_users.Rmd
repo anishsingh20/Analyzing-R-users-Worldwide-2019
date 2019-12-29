@@ -448,3 +448,13 @@ RUsers %>%  filter(Country == 'Canada') %>%
 
 Canada also has the same pattern i.e higher salaries for professionals in ages 50-59.
 
+
+#### Germany 
+
+
+```{r warning=FALSE,message=FALSE}
+
+
+
+
+```
