@@ -494,7 +494,7 @@ Now let's do bi-variate analysis for education level of R users and their annual
 ```
 
 
-#### United States
+#### India
 ```{r message=FALSE,warning=FALSE}
 
 ```
