@@ -486,7 +486,7 @@ For Germany we can notice that as ages grow professionals have more median annua
 ### Education level 
 
 Now let's do bi-variate analysis for education level of R users and their annual median wages using a box-plot.
-
+We will consider only few top R user countries.
 
 #### United States
 ```{r message=FALSE,warning=FALSE}
@@ -499,3 +499,25 @@ Now let's do bi-variate analysis for education level of R users and their annual
 
 ```
 
+
+#### Norway
+```{r message=FALSE,warning=FALSE}
+
+```
+
+#### United Kingdom
+```{r message=FALSE,warning=FALSE}
+
+```
+
+
+#### Canada
+```{r message=FALSE,warning=FALSE}
+
+```
+
+
+#### Germany
+```{r message=FALSE,warning=FALSE}
+
+```
