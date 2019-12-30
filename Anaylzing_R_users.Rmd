@@ -480,3 +480,22 @@ RUsers %>%  filter(Country == 'Germany') %>%
 For Germany we can notice that as ages grow professionals have more median annual salaries.
 
 
+-------------------------------------
+
+
+### Education level 
+
+Now let's do bi-variate analysis for education level of R users and their annual median wages using a box-plot.
+
+
+#### United States
+```{r message=FALSE,warning=FALSE}
+
+```
+
+
+#### United States
+```{r message=FALSE,warning=FALSE}
+
+```
+
