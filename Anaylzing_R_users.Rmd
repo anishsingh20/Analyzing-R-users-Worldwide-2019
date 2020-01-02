@@ -674,5 +674,40 @@ We observe the same for Germany as well.
 Let's now check that what type of Undergraduate degrees have what amount of UG salaries. As R users come from a diverse set of UG degrees.
 
 
+#### 1) United States
+
+```{r message=FALSE,warning=FALSE}
+
+
+```
+
+
+#### 2) India
+```{r message=FALSE,warning=FALSE}
+
+
+```
+
+#### 3) United Kingdom
+```{r message=FALSE,warning=FALSE}
+
+
+```
+
+#### 4) Canada 
+```{r message=FALSE,warning=FALSE}
+
+
+```
+
+#### 5) Germany
+```{r message=FALSE,warning=FALSE}
+
+
+```
+
+
+
+
 
 
