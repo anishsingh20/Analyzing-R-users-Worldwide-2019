@@ -491,6 +491,17 @@ We will consider only few top R user countries.
 #### United States
 ```{r message=FALSE,warning=FALSE}
 
+RUsers %>%  filter(Country=='United States') %>% 
+            filter(!is.na(Edlevel)) %>% 
+            inner_join(
+              RUsers %>% 
+                filter(Country=='United States') %>% 
+                filter(!is.na(Edlevel)) %>% 
+                count() %>% 
+                filter(n >= 20) %>% 
+                
+            )
+
 ```
 
 
