@@ -556,6 +556,7 @@ RUsers %>%  filter(Country == 'India') %>%
 
 ```
 
+We observe the same pattern for Indian professionals as well.
 
 #### Norway
 ```{r message=FALSE,warning=FALSE}
