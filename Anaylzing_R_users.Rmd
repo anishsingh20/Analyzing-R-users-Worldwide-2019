@@ -664,3 +664,15 @@ RUsers %>%  filter(Country == 'Germany') %>%
 We observe the same for Germany as well.
 
 
+
+
+-----------------------------------
+
+
+### Undergraduate Majors
+
+Let's now check that what type of Undergraduate degrees have what amount of UG salaries. As R users come from a diverse set of UG degrees.
+
+
+
+
