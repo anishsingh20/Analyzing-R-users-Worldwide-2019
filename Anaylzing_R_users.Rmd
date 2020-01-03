@@ -714,6 +714,32 @@ The above plot is quite interesting as we can notice that the highest median sal
 #### 2) India
 ```{r message=FALSE,warning=FALSE}
 
+RUsers %>%  filter(Country == 'India') %>% 
+            filter(!is.na(UndergradMajor)) %>% 
+            inner_join(
+              RUsers %>% 
+                filter(Country == 'India') %>% 
+                filter(!is.na(UndergradMajor)) %>% 
+                group_by(UndergradMajor) %>% 
+                count() %>% 
+                filter(n >= 20) %>% 
+                select(UndergradMajor) ,  by = 'UndergradMajor')  %>% 
+            mutate(UndergradMajor = reorder(UndergradMajor,ConvertedComp,median)) %>% 
+           ggplot(aes(x = UndergradMajor, y = ConvertedComp)) + 
+              geom_boxplot(outlier.shape = NA) +
+              theme(axis.text.x = element_text(angle = 60, hjust = 1)) +
+              geom_jitter(aes(UndergradMajor, ConvertedComp),
+                          position = position_jitter(width = 0.1, height = 0),
+                          alpha = 0.6,
+                          size = 1) +
+              scale_y_continuous(breaks = seq(0, 40000, by = 2000), 
+                                 labels = function(x) format(x, big.mark = ",", decimal.mark = '.', scientific = FALSE)) +
+              coord_flip(ylim = c(0, 40000)) +
+              ylab('Annual USD salary') +
+              xlab('Undergraduate Degree') +
+              ggtitle("Distributions of R Users' Salaries by Undergraduate Degree for India") +
+              theme(plot.title = element_text(hjust = 0.5))
+
 
 ```
 
