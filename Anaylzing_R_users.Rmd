@@ -853,7 +853,7 @@ Let's analyze the salaries of the type of developers who use R.
 
 
 #### United States
-```{r}
+```{r message=FALSE,warning=FALSE}
 
 RUsers %>% 
   filter(Country == 'United States') %>% 
@@ -880,6 +880,8 @@ RUsers %>%
 
 ```
 As expected we can notice in the plot that the highest salaries are for __VPs and Managers and least for Students__.
+
+
 
 #### India
 ```{r}
