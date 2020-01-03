@@ -775,6 +775,8 @@ RUsers %>%  filter(Country == 'United Kingdom') %>%
               theme(plot.title = element_text(hjust = 0.5))
 
 ```
+For UK,we notice that the highest annual median salaries are for __CS__ undergraduates.
+
 
 #### 4) Canada 
 ```{r message=FALSE,warning=FALSE}
