@@ -742,7 +742,7 @@ RUsers %>%  filter(Country == 'India') %>%
 
 
 ```
-
+For India as well we observe the same pattern.
 
 
 #### 3) United Kingdom
