@@ -722,7 +722,7 @@ RUsers %>%  filter(Country == 'India') %>%
                 filter(!is.na(UndergradMajor)) %>% 
                 group_by(UndergradMajor) %>% 
                 count() %>% 
-                filter(n >= 20) %>% 
+                filter(n >= 5) %>% 
                 select(UndergradMajor) ,  by = 'UndergradMajor')  %>% 
             mutate(UndergradMajor = reorder(UndergradMajor,ConvertedComp,median)) %>% 
            ggplot(aes(x = UndergradMajor, y = ConvertedComp)) + 
@@ -732,7 +732,7 @@ RUsers %>%  filter(Country == 'India') %>%
                           position = position_jitter(width = 0.1, height = 0),
                           alpha = 0.6,
                           size = 1) +
-              scale_y_continuous(breaks = seq(0, 40000, by = 2000), 
+              scale_y_continuous(breaks = seq(0, 40000, by = 5000), 
                                  labels = function(x) format(x, big.mark = ",", decimal.mark = '.', scientific = FALSE)) +
               coord_flip(ylim = c(0, 40000)) +
               ylab('Annual USD salary') +
@@ -742,6 +742,8 @@ RUsers %>%  filter(Country == 'India') %>%
 
 
 ```
+
+
 
 #### 3) United Kingdom
 ```{r message=FALSE,warning=FALSE}
