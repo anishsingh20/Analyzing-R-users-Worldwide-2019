@@ -845,5 +845,40 @@ So for Germany, the highest median annual salary is for professionals with a deg
 
 
 
+### Developer Type
+
+
+
+Let's analyze the salaries of the type of developers who use R.
+
+
+#### United States
+```{r}
+
+```
+
+
+#### India
+```{r}
+
+```
+
+
+#### United States
+```{r}
+
+```
+
+
+#### United States
+```{r}
+
+```
+
+#### United States
+```{r}
+
+```
+
 
 
