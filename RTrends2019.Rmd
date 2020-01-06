@@ -557,6 +557,7 @@ hchart(TopLang,hcaes(x=TopLang$LanguageWorkedWith,y=TopLang$Count),type="column"
 
 
 ```
+So we can notice that the most used languages are __HTML/CSS;JavaScript;PHP;SQL;C#__.
 
 
 
