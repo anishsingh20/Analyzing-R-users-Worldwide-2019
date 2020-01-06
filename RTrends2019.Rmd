@@ -548,6 +548,13 @@ TopLang <- data %>% group_by(LanguageWorkedWith) %>%
 TopLang<-na.omit(TopLang)
 
 
+hchart(TopLang,hcaes(x=TopLang$LanguageWorkedWith,y=TopLang$Count),type="column",color="#EAF253") %>%  
+  hc_exporting(enabled = TRUE) %>%
+  hc_title(text="Top Programming languages used By developers",align="center") %>%
+  hc_add_theme(hc_theme_elementary()) 
+
+
+
 
 ```
 
