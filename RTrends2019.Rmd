@@ -519,8 +519,6 @@ hchart(WorkChallTop,hcaes(x=WorkChallTop$WorkChallenge,y=WorkChallTop$Count),typ
   hc_add_theme(hc_theme_elementary()) 
 
 
-WorkChallTop
-
 ```
 
 The top Work challenges included things like :
