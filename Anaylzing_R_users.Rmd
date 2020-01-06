@@ -1,8 +1,9 @@
 ---
 title: "Analyzing R users"
 output:
-  html_notebook: default
   pdf_document: default
+  html_document:
+    df_print: paged
 ---
 
 

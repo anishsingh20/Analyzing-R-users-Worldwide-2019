@@ -1,8 +1,9 @@
 ---
 title: "Analyzing Stackoverflow developer survey"
 output:
-  html_notebook: default
+  word_document: default
   pdf_document: default
+always_allow_html: yes
 ---
 
 ## Overview
