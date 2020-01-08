@@ -173,7 +173,7 @@ Edlevelger<- data %>% filter(Country == "Germany") %>%
 #let's create a Barplot
 hchart(Edlevelger,hcaes(x=Edlevelger$EdLevel,y=Edlevelger$count),type="column",color="purple",name="Count") %>%  
   hc_exporting(enabled = TRUE) %>%
-  hc_title(text="Barplot Education level of german Respondents",align="center") %>%
+  hc_title(text="Barplot Education level of German Respondents",align="center") %>%
   hc_add_theme(hc_theme_elementary()) 
 ```
 
@@ -335,7 +335,7 @@ table(JobSat)
 ```
 
 
-Let's create a helper function 
+Let's create a helper function:
 
 ```{r message=FALSE,warning=FALSE}
 
@@ -393,16 +393,16 @@ CarSatUk <- DrillDown(data,Country,"United Kingdom",CareerSat)
 
 CarSatChina <- DrillDown(data,Country,"China",CareerSat)   
 CarSatJapan <- DrillDown(data,Country,"Japan",CareerSat)   
-
+CarSatGermany <- DrillDown(data,Country,"Germany",CareerSat)  
 
 
 ```
 
-For almost all the countries the Job and career satisfactions were same. Most of the people were __SLightly Satisfied__ .
+For almost all the countries the Job and career satisfactions were same. Most of the people were __Slightly Satisfied__ .
 
-Whereas in Country like US, most of the respondents were __Very Satisfied__. 
+Whereas in Country like US,UK most of the respondents were __Very Satisfied__. 
 
-Only __China__ had most of the respondents which were __Slightly Satisfied__ and __Slightly Dissatisfied__ .
+Only __China__ had most of the respondents which were __Slightly Satisfied__ followed by __Slightly Dissatisfied__ as the second highest response.
 
 
 
