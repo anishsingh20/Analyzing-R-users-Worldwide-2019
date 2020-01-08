@@ -453,9 +453,9 @@ JfUS <- JfUS %>%
   top_n(10)
 
 
-hchart(JfUS,hcaes(x=TOPJF$JobFactors,y=TOPJF$Count),type="column",color="#FDE725") %>%  
+hchart(JfUS,hcaes(x=JfUS$Satisfaction,y=JfUS$Count),type="column",color="#FDE725") %>%  
   hc_exporting(enabled = TRUE) %>%
-  hc_title(text="Job Factors which matter the most",align="center") %>%
+  hc_title(text="Job Factors which matter the most for US",align="center") %>%
   hc_add_theme(hc_theme_elementary()) 
 
 
@@ -466,9 +466,9 @@ JfChina <- JfChina %>%
 
 
 
-hchart(JfChina,hcaes(x=TOPJF$JobFactors,y=TOPJF$Count),type="column",color="#FDE725") %>%  
+hchart(JfChina,hcaes(x=JfChina$Satisfaction,y=JfChina$Count),type="column",color="#FDE725") %>%  
   hc_exporting(enabled = TRUE) %>%
-  hc_title(text="Job Factors which matter the most",align="center") %>%
+  hc_title(text="Job Factors which matter the most for China",align="center") %>%
   hc_add_theme(hc_theme_elementary()) 
 
 
