@@ -432,11 +432,18 @@ JfIndia <- JfIndia %>%
   top_n(10)
 
 
+hchart(JfIndia,hcaes(x=JfIndia$Satisfaction,y=JfIndia$Count),type="column",color="#FDE725") %>%  
+  hc_exporting(enabled = TRUE) %>%
+  hc_title(text="Job Factors which matter the most for Indians",align="center") %>%
+  hc_add_theme(hc_theme_elementary()) 
+
+
+
 ```
 So in India respondents mostly cared for factors such as __*'Languages, frameworks, and other technologies I'd be working with;Office environment or company culture;Opportunities for professional development'*__
 
 
-Let's see for the US respondents
+Let's see for the US,Japan and Chinese respondents
 
 ```{r warning=FALSE,message=FALSE}
 
@@ -446,6 +453,12 @@ JfUS <- JfUS %>%
   top_n(10)
 
 
+hchart(JfUS,hcaes(x=TOPJF$JobFactors,y=TOPJF$Count),type="column",color="#FDE725") %>%  
+  hc_exporting(enabled = TRUE) %>%
+  hc_title(text="Job Factors which matter the most",align="center") %>%
+  hc_add_theme(hc_theme_elementary()) 
+
+
 JfChina <- DrillDown(data,Country,"China",JobFactors)
 
 JfChina <- JfChina %>% 
@@ -453,11 +466,23 @@ JfChina <- JfChina %>%
 
 
 
+hchart(JfChina,hcaes(x=TOPJF$JobFactors,y=TOPJF$Count),type="column",color="#FDE725") %>%  
+  hc_exporting(enabled = TRUE) %>%
+  hc_title(text="Job Factors which matter the most",align="center") %>%
+  hc_add_theme(hc_theme_elementary()) 
+
+
 JfJapan <- DrillDown(data,Country,"Japan",JobFactors)
 
 JfJapan <- na.omit(JfJapan) %>% 
   top_n(10)
 
+
+
+hchart(JfJapan,hcaes(x=TOPJF$JobFactors,y=TOPJF$Count),type="column",color="#FDE725") %>%  
+  hc_exporting(enabled = TRUE) %>%
+  hc_title(text="Job Factors which matter the most",align="center") %>%
+  hc_add_theme(hc_theme_elementary()) 
 
 
 ```
