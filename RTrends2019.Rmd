@@ -1,8 +1,10 @@
 ---
 title: "Analyzing Stackoverflow developer survey"
 output:
-  word_document: default
+  html_document:
+    df_print: paged
   pdf_document: default
+  word_document: default
 always_allow_html: yes
 ---
 
@@ -479,9 +481,9 @@ JfJapan <- na.omit(JfJapan) %>%
 
 
 
-hchart(JfJapan,hcaes(x=TOPJF$JobFactors,y=TOPJF$Count),type="column",color="#FDE725") %>%  
+hchart(JfJapan,hcaes(x=JfJapan$Satisfaction,y=JfJapan$Count),type="column",color="#FDE725") %>%  
   hc_exporting(enabled = TRUE) %>%
-  hc_title(text="Job Factors which matter the most",align="center") %>%
+  hc_title(text="Job Factors which matter the most for Japan",align="center") %>%
   hc_add_theme(hc_theme_elementary()) 
 
 
