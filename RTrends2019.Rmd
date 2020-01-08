@@ -403,7 +403,10 @@ Whereas in Country like US, most of the respondents were __Very Satisfied__.
 Only __China__ had most of the respondents which were __Slightly Satisfied__ and __Slightly Dissatisfied__ .
 
 
-#### We can also analyze the top Job Factors
+
+
+
+### We can also analyze the top Job Factors
 
 
 ```{r message=FALSE,warning=FALSE}
