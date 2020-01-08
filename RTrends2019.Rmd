@@ -440,6 +440,18 @@ hchart(JfIndia,hcaes(x=JfIndia$Satisfaction,y=JfIndia$Count),type="column",color
   hc_add_theme(hc_theme_elementary()) 
 
 
+JfUk <- DrillDown(data,Country,"United States",JobFactors)
+
+JfUk <- JfUk %>% 
+  top_n(10)
+
+
+hchart(JfUk,hcaes(x=JfUk$Satisfaction,y=JfUk$Count),type="column",color="#FDE725") %>%  
+  hc_exporting(enabled = TRUE) %>%
+  hc_title(text="Job Factors which matter the most for UK",align="center") %>%
+  hc_add_theme(hc_theme_elementary()) 
+
+
 
 ```
 So in India respondents mostly cared for factors such as __*'Languages, frameworks, and other technologies I'd be working with;Office environment or company culture;Opportunities for professional development'*__
@@ -459,6 +471,20 @@ hchart(JfUS,hcaes(x=JfUS$Satisfaction,y=JfUS$Count),type="column",color="#FDE725
   hc_exporting(enabled = TRUE) %>%
   hc_title(text="Job Factors which matter the most for US",align="center") %>%
   hc_add_theme(hc_theme_elementary()) 
+
+
+
+JfGer <- DrillDown(data,Country,"Germany",JobFactors)
+
+JfGer <- JfGer %>% 
+  top_n(10)
+
+
+hchart(JfGer,hcaes(x=JfGer$Satisfaction,y=JfGer$Count),type="column",color="#FDE725") %>%  
+  hc_exporting(enabled = TRUE) %>%
+  hc_title(text="Job Factors which matter the most for Germany",align="center") %>%
+  hc_add_theme(hc_theme_elementary()) 
+
 
 
 JfChina <- DrillDown(data,Country,"China",JobFactors)
