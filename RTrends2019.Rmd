@@ -430,7 +430,7 @@ hchart(TOPJF,hcaes(x=TOPJF$JobFactors,y=TOPJF$Count),type="column",color="#FDE72
 ```
 
 
-#### Let's analyze the top job factors for various Countries
+#### Let's analyze the top Job factors for various Countries
 
 
 
@@ -464,7 +464,6 @@ hchart(JfUk,hcaes(x=JfUk$Satisfaction,y=JfUk$Count),type="column",color="#FDE725
 So in India respondents mostly cared for factors such as __*'Languages, frameworks, and other technologies I'd be working with;Office environment or company culture;Opportunities for professional development'*__
 
 
-Let's see for the US,Japan and Chinese and toehr major respondents:
 
 ```{r warning=FALSE,message=FALSE}
 
